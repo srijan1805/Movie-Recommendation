@@ -2,9 +2,9 @@ import axios from "axios";
 
 const instance = axios.create({
   baseURL:
-    process.env.NODE_ENV === "production"
-      ? process.env.NEXT_PUBLIC_API_URL
-      : "http://localhost:3000",
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : process.env.NEXT_PUBLIC_API_URL,
   timeout: 1000,
 });
 

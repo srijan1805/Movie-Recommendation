@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center space-y-5 p-24">
       <h1 className="text-2xl font-semibold">Movie Recommendation</h1>
-      <Link href={`/recommendations`} className="btn btn-primary uppercase">
+      <Link href="/recommendations" className="btn btn-primary uppercase">
         Recommend me
       </Link>
     </main>
