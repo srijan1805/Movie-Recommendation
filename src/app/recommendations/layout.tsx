@@ -7,7 +7,9 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      {children}
+      <div className="px-4 py-8 md:px-8 min-h-screen max-w-7xl mx-auto">
+        {children}
+      </div>
     </>
   );
 }

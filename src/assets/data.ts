@@ -55,6 +55,27 @@ export const moviesData = [
     popularity: 22.608,
     video: false,
   },
+  {
+    adult: false,
+    id: 78,
+    original_title: "Blade Runner",
+    popularity: 68.13,
+    video: false,
+  },
+  {
+    adult: false,
+    id: 290250,
+    original_title: "The Nice Guys",
+    popularity: 30.833,
+    video: false,
+  },
+  {
+    adult: false,
+    id: 76341,
+    original_title: "Mad Max: Fury Road",
+    popularity: 138.506,
+    video: false,
+  },
 ];
 
 export function makeData() {

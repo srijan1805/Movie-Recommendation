@@ -16,7 +16,7 @@ function Navbar() {
       <button
         onClick={() => {
           const movieId = getRandomMovieId();
-          router.push(`/recommendations?q=${movieId}`);
+          router.push("/recommendations");
         }}
         className="btn btn-primary"
       >
