@@ -1,6 +1,7 @@
 import { Movie } from "@/types/indes";
 import Image from "next/image";
 import * as DefaultPoster from "@/assets/images/movie.jpg";
+import { Button, Card, CardBody, CardFooter } from "@nextui-org/react";
 
 const STRING_LIMIT = 128;
 
@@ -17,31 +18,27 @@ function limitChar(
 
 function MovieCard({ movie }: CardProps) {
   return (
-    <div className="card w-full h-44 card-side bg-base-100 shadow-xl">
-      <figure className="w-[40%] max-w-[124px] lg:w-[35%]">
-        <div className="h-full w-full relative">
-          {movie.poster_path ? (
-            <Image
-              src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}
-              alt="Poster"
-              fill
-            />
-          ) : (
-            <Image src="/movie.jpg" alt="Poster" fill />
-          )}
-        </div>
-      </figure>
-      <div className="card-body w-[60%] p-4">
-        <h2 className="card-title">{limitChar(movie.title, 50)}</h2>
-        {/* <p className="h-10 overflow-y-scroll">
-         
-          {movie.overview}
-        </p> */}
-        <div className="card-actions">
-          <button className="btn btn-primary">Watch</button>
-        </div>
-      </div>
-    </div>
+    <Card shadow="sm">
+      <CardBody>
+        <Image
+          src={
+            movie.poster_path
+              ? `https://image.tmdb.org/t/p/w185/${movie.poster_path}`
+              : "/movie.jpg"
+          }
+          alt="Poster"
+          height={500}
+          width={300}
+          className="rounded-lg"
+        />
+      </CardBody>
+
+      <CardFooter className="">
+        <Button className="w-full" color="danger" variant="flat">
+          Watch
+        </Button>
+      </CardFooter>
+    </Card>
   );
 }
 

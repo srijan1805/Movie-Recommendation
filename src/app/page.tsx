@@ -1,12 +1,22 @@
+import { Button, Card } from "@nextui-org/react";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center space-y-5 p-24">
-      <h1 className="text-2xl font-semibold">Movie Recommendation</h1>
-      <Link href="/recommendations" className="btn btn-primary uppercase">
-        Recommend me
-      </Link>
+    <main className="flex min-h-screen flex-col items-center justify-center bg-hero bg-center">
+      <Card
+        className="p-6 border-none bg-background/60 dark:bg-default-100/70 text-center space-y-4"
+        shadow="lg"
+      >
+        <h1 className="text-2xl lg:text-4xl font-semibold">
+          Movie Recommendation
+        </h1>
+        <Link href="/recommendations">
+          <Button color="danger" variant="shadow">
+            Recommend me
+          </Button>
+        </Link>
+      </Card>
     </main>
   );
 }

@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 
 export const dynamic = "force-dynamic";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Navbar />
+      <Header />
       <div className="px-4 py-8 md:px-8 min-h-screen max-w-7xl mx-auto">
         {children}
       </div>
