@@ -11,11 +11,16 @@ export default function Home() {
         <h1 className="text-2xl lg:text-4xl font-semibold">
           Movie Recommendation
         </h1>
-        <Link href="/recommendations">
-          <Button color="danger" variant="shadow">
-            Recommend me
-          </Button>
-        </Link>
+
+        <Button
+          as={Link}
+          href="/recommendations"
+          color="danger"
+          variant="shadow"
+          size="lg"
+        >
+          Recommend me
+        </Button>
       </Card>
     </main>
   );
