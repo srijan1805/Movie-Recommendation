@@ -5,6 +5,7 @@ import {
   NavbarContent,
   NavbarItem,
   Button,
+  Link as NextLink,
 } from "@nextui-org/react";
 import Link from "next/link";
 
@@ -19,7 +20,7 @@ function Header() {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} href="/recommendations" color="danger">
+          <Button as={NextLink} href="/recommendations" color="danger">
             Recommend Again
           </Button>
         </NavbarItem>
