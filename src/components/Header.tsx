@@ -1,4 +1,3 @@
-import { getRandomMovieId } from "@/assets/data";
 import React from "react";
 import {
   Navbar,
